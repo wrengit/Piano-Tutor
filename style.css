@@ -1,0 +1,42 @@
+body {
+    background-color: #6a6d9c;
+}
+
+#piano {
+    height: 80vh;
+    width: 85vw;
+}
+.key {
+    background-color: #f8f2e0;
+    height: 100%;
+    width: 14%;
+    margin: 0.1428%;
+}
+
+.sharp {
+    background-color: #000000;
+    height: 55%;
+    width: 7%;
+    position: absolute;
+    top: 0;
+}
+
+#one {
+    left: 16%;
+}
+
+#two {
+    left: 28.3%;
+}
+
+#three {
+    left: 52.5%;
+}
+
+#four {
+    left: 65%;
+}
+
+#five {
+    left: 77%;
+}
