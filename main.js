@@ -1,3 +1,4 @@
+
 /*Constants*/
 
 const keys = ['c-key', 'csharp-key', 'd-key', 'dsharp-key', 'e-key', 'f-key', 'fsharp-key', 'g-key', 'gsharp-key', 'a-key', 'asharp-key', 'b-key', 'chigh-key'];
@@ -13,7 +14,7 @@ const keyUp = keys => {
     keys.target.style.backgroundColor = ''
 }
 const keyPress = note => {
-    note.onmousedown = () => {
+    /*note.onmousedown = () => {
         keyDown(event);
     }
     note.onmouseup = () => {
@@ -21,13 +22,17 @@ const keyPress = note => {
     }
     note.onmouseout =() => {
         keyUp(event);
-    }
-    note.ontouchstart = () => {
+    }*/
+    note.onpointerdown = () => {
         keyDown(event);
     }
-    note.ontouchend = () => {
+    note.onpointerup = () => {
+        keyUp(event);
+    }
+    note.onpointerleave = () => {
         keyUp(event);
     }
 };
 
 notes.forEach(keyPress);
+
