@@ -4,6 +4,16 @@ body {
 
 .menu {
     height: 20vh;
+    text-align: center;
+}
+
+#notebox { 
+    height: 18vh;
+    width: 9vw;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    
 }
 
 /*Styling for the piano layout and keys*/
