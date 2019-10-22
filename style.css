@@ -1,9 +1,14 @@
 body {
     background-color: #6a6d9c;
 }
+
+.menu {
+    height: 20vh;
+}
+
 /*Styling for the piano layout and keys*/
 #piano {
-    height: 80vh;
+    height: 75vh;
     width: 85vw;
 }
 .key {
@@ -15,10 +20,10 @@ body {
 
 .sharp {
     background-color: #000000;
-    height: 55%;
+    height: 45%;
     width: 7%;
     position: absolute;
-    top: 0;
+    top: 20vh;
 }
 /* Places sharp keys in correct location*/
 #csharp-key {
