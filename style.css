@@ -1,7 +1,7 @@
 body {
     background-color: #6a6d9c;
 }
-
+/*Styling for the piano layout and keys*/
 #piano {
     height: 80vh;
     width: 85vw;
@@ -9,7 +9,7 @@ body {
 .key {
     background-color: #f8f2e0;
     height: 100%;
-    width: 14%;
+    width: 12%;
     margin: 0.1428%;
 }
 
@@ -20,23 +20,23 @@ body {
     position: absolute;
     top: 0;
 }
-
-#one {
-    left: 16%;
+/* Places sharp keys in correct location*/
+#csharp-key {
+    left: 14.2%;
 }
 
-#two {
-    left: 28.3%;
+#dsharp-key {
+    left: 24.7%;
 }
 
-#three {
-    left: 52.5%;
+#fsharp-key {
+    left: 45.7%;
 }
 
-#four {
-    left: 65%;
+#gsharp-key {
+    left: 56.2%;
 }
 
-#five {
-    left: 77%;
+#asharp-key {
+    left: 66.5%;
 }
