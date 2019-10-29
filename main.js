@@ -10,20 +10,25 @@ const noteDataBox = document.getElementById("notebox");
 
 /*Changes background colour of key to indicate key has been pressed, displays played note above piano on keyUp/Down variable*/
 let timerNote;
-function timerNoteDelay() { 
+const timerNoteDelay = () => { 
     clearTimeout(timerNote);
     timerNote = setTimeout (() => {
         noteDataBox.innerHTML = ""
     }, 1500)
 };
 
+const stopAudio = audio => {
+    audio.pause();
+    audio.currentTime = 0;
+}
+
 const keyDown = key => {
     let playAudio = key.target.getAttribute("data-sound");
-    document.getElementById(playAudio).play(); //Plays entire note, even when key is not pressed FIX ME!!
-    key.target.style.backgroundColor = 'green';
-    noteDataBox.innerHTML = key.target.getAttribute("data-note");
-    
-
+    let targetPlayAudio = document.getElementById(playAudio);
+    stopAudio(targetPlayAudio); //resets audio track if pressed before audio finished
+    targetPlayAudio.play(); //plays audio on keypress
+    key.target.style.backgroundColor = 'green'; //indicates key has been pressed visually
+    noteDataBox.innerHTML = key.target.getAttribute("data-note"); //fetches actual note displaed in notebox above piano
 }
 const keyUp = key => {
     key.target.style.backgroundColor = ''; 
@@ -45,4 +50,3 @@ const keyPress = note => {
 }
 notes.forEach(keyPress);
 
-/*Play sounds on keey press*/
