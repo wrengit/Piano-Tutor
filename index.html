@@ -9,53 +9,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container-fluid menu">
-        <div class="row h-100">
-            <div class="col-4 my-auto">navigate to main menu</div>
-            <div class="col-4 my-auto mx-auto" id="notebox"></div>
-            <div class="col-4 my-auto">currently selected song</div>
-        </div>
-    </section>
+   <section class="container-fluid" >
+       <div class="row mx-auto align-items-center justify-content-center" id="landing-page" >
+           <div class="col-10 landing-box" id="lp-portrait">
+                Please rotate your device to landscape mode. This game will not work in portrait mode.
+           </div>
+           <div class="col-10 landing-box" id="lp-landscape">
+               This device should be horizontal.
+           </div>
 
-    <!--Single octave piano keys-->
-    <section class="container-fluid">
-        <div class="row mx-auto" id="piano">
-            <div class="key rounded-bottom" id="c-key" data-note="C" data-sound="middle-C-sound"></div>
-            <div class="sharp rounded-bottom" id="csharp-key" data-note="C#" data-sound="Csharp-sound"></div>
-            <div class="key rounded-bottom"id="d-key" data-note="D" data-sound="D-sound"></div>
-            <div class="sharp rounded-bottom" id="dsharp-key" data-note="D#" data-sound="Dsharp-sound"></div>
-            <div class="key rounded-bottom"id="e-key" data-note="E" data-sound="E-sound"></div>
-            <div class="key rounded-bottom"id="f-key" data-note="F" data-sound="F-sound"></div>
-            <div class="sharp rounded-bottom" id="fsharp-key" data-note="F#" data-sound="Fsharp-sound"></div>
-            <div class="key rounded-bottom"id="g-key" data-note="G" data-sound="G-sound"></div>
-            <div class="sharp rounded-bottom" id="gsharp-key" data-note="G#" data-sound="Gsharp-sound"></div>
-            <div class="key rounded-bottom"id="a-key" data-note="A" data-sound="A-sound"></div>
-            <div class="sharp rounded-bottom" id="asharp-key" data-note="A#" data-sound="Asharp-sound"></div>
-            <div class="key rounded-bottom" id="b-key" data-note="B" data-sound="B-sound"></div>
-            <div class="key rounded-bottom" id="chigh-key" data-note="C" data-sound="highC-sound"></div>
-        </div>
-    </section>
-    <section>
-        <audio src="assets/keywavs/middleC.wav" preload="auto" id="middle-C-sound"></audio>
-        <audio src="assets/keywavs/Csharp.wav" preload="auto" id="Csharp-sound"></audio>
-        <audio src="assets/keywavs/D.wav" preload="auto" id="D-sound"></audio>
-        <audio src="assets/keywavs/Dsharp.wav" preload="auto" id="Dsharp-sound"></audio>
-        <audio src="assets/keywavs/E.wav" preload="auto" id="E-sound"></audio>
-        <audio src="assets/keywavs/F.wav" preload="auto" id="F-sound"></audio>
-        <audio src="assets/keywavs/Fsharp.wav" preload="auto" id="Fsharp-sound"></audio>
-        <audio src="assets/keywavs/G.wav" preload="auto" id="G-sound"></audio>
-        <audio src="assets/keywavs/Gsharp.wav" preload="auto" id="Gsharp-sound"></audio>
-        <audio src="assets/keywavs/A.wav" preload="auto" id="A-sound"></audio>
-        <audio src="assets/keywavs/Asharp.wav" preload="auto" id="Asharp-sound"></audio>
-        <audio src="assets/keywavs/B.wav" preload="auto" id="B-sound"></audio>
-        <audio src="assets/keywavs/highC.wav" preload="auto" id="highC-sound"></audio>
-    </section>
-
-
-
-
-
-
+       </div>
+   </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>    
