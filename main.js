@@ -8,7 +8,7 @@ keys.forEach((key) => {
 /*Assigns #notebox to noteDataBox*/
 const noteDataBox = document.getElementById("notebox");
 
-/*Sets a delay before the pressed note disapears from the display in #otebox*/
+/*Sets a delay before the pressed note disapears from the display in #notebox*/
 let timerNote;
 const timerNoteDelay = () => { 
     clearTimeout(timerNote);
@@ -17,7 +17,7 @@ const timerNoteDelay = () => {
     }, 1500)
 };
 
-/*Stops note audio playing on repeated ker presses of the same key*/
+/*Stops note audio playing on repeated key presses of the same key*/
 const stopAudio = audio => {
     audio.pause();
     audio.currentTime = 0;
@@ -25,11 +25,11 @@ const stopAudio = audio => {
 
 /*Events triggered on a key being pressed*/
 const keyDown = key => {
-    let playAudio = key.target.getAttribute("data-sound");
-    let targetPlayAudio = document.getElementById(playAudio);
+    let playAudio = key.target.getAttribute("data-sound");  //assigns the data-sound attribute of the pressed key to playAudio
+    let targetPlayAudio = document.getElementById(playAudio);  //matches the data-sound info the ID of the audio track
     stopAudio(targetPlayAudio); //resets audio track if pressed before audio finished
-    targetPlayAudio.play(); //plays audio on keypress
-    key.target.style.backgroundColor = 'green'; //indicates key has been pressed visually
+    targetPlayAudio.play();  //plays audio on keypress
+    key.target.style.backgroundColor = 'green';  //indicates key has been pressed visually
     noteDataBox.innerHTML = key.target.getAttribute("data-note"); //fetches actual note displaed in notebox above piano
 }
 /*Events trigged on a key being released*/
