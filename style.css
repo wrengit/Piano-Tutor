@@ -1,5 +1,7 @@
 body {
     background-color: #6a6d9c;
+    height: 100%;
+    width: 100%;
 }
 
 .menu {
@@ -54,4 +56,31 @@ body {
 
 #asharp-key {
     left: 66.5%;
+}
+
+/*Landing page styling*/
+#landing-page{
+    height: 100vh;
+}
+
+.landing-box {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    width: 90vw;
+    height: 60vh;
+}
+
+
+/*Custom media queries*/
+@media (orientation:portrait) {
+    #lp-landscape {
+        display: none;
+    }
+}
+
+@media (orientation:landscape) {
+    #lp-portrait {
+        display: none;
+    }
 }
