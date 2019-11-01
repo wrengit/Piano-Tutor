@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--menu items-->
     <section class="container-fluid menu">
         <div class="row h-100">
             <div class="col-4 my-auto">navigate to main menu</div>
@@ -17,7 +18,7 @@
         </div>
     </section>
 
-    <!--Single octave piano keys-->
+<!--Single octave piano keys-->
     <section class="container-fluid">
         <div class="row mx-auto" id="piano">
             <div class="key rounded-bottom" id="c-key" data-note="C" data-sound="middle-C-sound"></div>
@@ -35,6 +36,8 @@
             <div class="key rounded-bottom" id="chigh-key" data-note="C" data-sound="highC-sound"></div>
         </div>
     </section>
+
+<!--audio files play when triggered by keypress-->
     <section>
         <audio src="assets/keywavs/middleCcomp.wav" preload="auto" id="middle-C-sound"></audio>
         <audio src="assets/keywavs/Csharpcomp.wav" preload="auto" id="Csharp-sound"></audio>
@@ -55,7 +58,7 @@
 
 
 
-
+<!--links to js files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>    
