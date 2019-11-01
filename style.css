@@ -68,13 +68,12 @@ body {
     border-style: solid;
     border-color: white;
     width: 90vw;
-    height: 60vh;
+    height: 40vh;
 }
-
 
 /*Custom media queries*/
 @media (orientation:portrait) {
-    #lp-landscape {
+    .landscape {
         display: none;
     }
 }

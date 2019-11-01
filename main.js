@@ -1,9 +1,9 @@
-/*Pushes the key id's into the notes array, making all paino key divs available to notes array*/
-const keys = ['c-key', 'csharp-key', 'd-key', 'dsharp-key', 'e-key', 'f-key', 'fsharp-key', 'g-key', 'gsharp-key', 'a-key', 'asharp-key', 'b-key', 'chigh-key']
-const notes = []
-keys.forEach((key) => {
+/*Pushes the key id's into the notes array, making all piano key divs available to notes array*/
+const keys = ['c-key', 'csharp-key', 'd-key', 'dsharp-key', 'e-key', 'f-key', 'fsharp-key', 'g-key', 'gsharp-key', 'a-key', 'asharp-key', 'b-key', 'chigh-key'];
+const notes = [];
+keys.forEach(key => {
     notes.push(document.getElementById(key));
-})
+});
 
 /*Assigns #notebox to noteDataBox*/
 const noteDataBox = document.getElementById("notebox");
@@ -14,8 +14,8 @@ const timerNoteDelay = () => {
     clearTimeout(timerNote);
     timerNote = setTimeout (() => {
         noteDataBox.innerHTML = ""
-    }, 1500)
-};
+    }, 1500);
+}
 
 /*Stops note audio playing on repeated key presses of the same key*/
 const stopAudio = audio => {
@@ -30,8 +30,9 @@ const keyDown = key => {
     stopAudio(targetPlayAudio); //resets audio track if pressed before audio finished
     targetPlayAudio.play();  //plays audio on keypress
     key.target.style.backgroundColor = 'green';  //indicates key has been pressed visually
-    noteDataBox.innerHTML = key.target.getAttribute("data-note"); //fetches actual note displaed in notebox above piano
+    noteDataBox.innerHTML = key.target.getAttribute("data-note"); //fetch and pass note displayed in notebox above piano
 }
+
 /*Events trigged on a key being released*/
 const keyUp = key => {
     key.target.style.backgroundColor = ''; 
