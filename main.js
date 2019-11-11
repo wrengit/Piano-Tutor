@@ -52,6 +52,40 @@ const keyPress = note => {
     }
 }
 
-/*Makes the keyPress variable available to all the key divs that were pushed tothe notes array*/
+/*Makes the keyPress variable available to all the key divs that were pushed to the notes array*/
 notes.forEach(keyPress);
 
+/*Makes selected song on song selection landing age, display as the drop down button*/
+
+
+/*Game*/
+
+const cKey = document.getElementById("c-key");
+const cSharp = document.getElementById("csharp-key");
+const dKey = document.getElementById("d-key");
+const dSharp = document.getElementById("dsharp-key");
+const eKey = document.getElementById("e-key");
+const fKey = document.getElementById("f-key");
+const fSharp = document.getElementById("fsharp-key");
+const gKey = document.getElementById("g-key");
+const gSharp = document.getElementById("gsharp-key");
+const aKey = document.getElementById("a-key");
+const aSharp = document.getElementById("asharp-key");
+const bKey = document.getElementById("b-key");
+const highC = document.getElementById("chigh-key");
+
+const testSong = [
+    cKey,
+    aKey,
+    bKey,
+    dSharp, 
+    aKey,
+    aKey
+]
+
+/*function startTutor() {
+    let order = testSong;
+    for (let i=0; i<3; i++) {
+        (order[i]).click();
+    }
+}*/
