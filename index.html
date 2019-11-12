@@ -9,31 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container-fluid h-100">
+    <section class="container-fluid h-100" id="main-image">
         <div class="row mx-auto align-items-center justify-content-center" id="landing-page" >
-            <div class="col-10 landing-box" id="lp-portrait">
-                             Please rotate your device to landscape mode. This game will not work in portrait mode.
+            <div class="col-10 landing-box text" id="lp-portrait">
+                <h2>Please rotate your device</h2>
+                <h3>This site works best in landscape mode</h3> 
             </div>
-            <div class="col-8 landscape" id="heading">
+            <div class="col-8 landscape text" id="heading">
                 <h1>Piano tutor</h1>
                 <h2>A simple, single octave piano with songs to play along with.</h2>
                 <h3>Please select a song and press play to start. Freeplay mode allows the piano to to be played without a tutor.</h3>
             </div>
             <div class="col-4 landscape text-center">
-                <div class="btn-group dropleft mb-4">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select song
-                    </button>    
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="songSelection">
-                        <a class="dropdown-item" href="#">Song 1</a>
-                        <a class="dropdown-item" href="#">Song 2</a>
-                        <a class="dropdown-item" href="#">Song 3</a>
-                        <a class="dropdown-item" href="#">FreePlay</a>
-                    </div>
-                </div>
                 <div>
-                    <button type="button" class="btn btn-success mt-4 mx-auto">Success</button>
+                    <button type="button" class="btn btn-success mb-4 mx-auto">Start Piano</button>
                 </div>
+                <select class="btn btn-secondary mt-4 mx-auto" id="dropdown-menu">
+                    <option value="free_play" selected>Free Play</option>
+                    <option value="song_1">Song 1</option>
+                    <option value="song_2">Song 2</option>
+                    <option value="song_3">Song 3</option>
+                </select>
+                
             </div>
         </div>
     </section>
