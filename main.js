@@ -21,15 +21,12 @@ keys.forEach(key => {
   notes.push(document.getElementById(key));
 });
 
-/* Assigns #notebox to noteDataBox */
-const noteDataBox = document.getElementById("notebox");
-
 /* Sets a delay before the pressed note disapears from the display in #notebox */
 let timerNote;
 const timerNoteDelay = () => {
   clearTimeout(timerNote);
   timerNote = setTimeout(() => {
-    noteDataBox.innerHTML = "";
+    $("#notebox").html(" ");
   }, 1500);
 };
 
@@ -45,15 +42,13 @@ const keyDown = key => {
   let targetPlayAudio = document.getElementById(playAudio); // matches the data-sound info the ID of the audio track
   stopAudio(targetPlayAudio); // resets audio track if pressed before audio finished
   targetPlayAudio.play(); // plays audio on keypress
-  key.target.style.backgroundColor = "orange"; // indicates key has been pressed visually
-  key.target.style.border = "orange";
-  noteDataBox.innerHTML = key.target.getAttribute("data-note"); // fetch and pass note displayed in notebox above piano
+  key.target.setAttribute("style", "background-color: orange; border: orange"); // indicates key has been pressed visually
+  $("#notebox").html(key.target.getAttribute("data-note"));// fetch and pass note displayed in notebox above piano
 };
 
 /* Events trigged on a key being released */
 const keyUp = key => {
-  key.target.style.backgroundColor = "";
-  key.target.style.border = "";
+  key.target.setAttribute("style", "background-color: ; border: ");
   timerNoteDelay();
 };
 
@@ -75,4 +70,20 @@ notes.forEach(keyPress);
 
 /* Game */
 
-const testSong = [];
+const testSong = ["c-key", "a-key", "b-key", "c-key", "b-key", "b-key"];
+
+$("#startTutor").click(function() {
+  let order = testSong;
+  let keyObject = {};
+
+  for (let i = 0; i < 6; i++) {
+    keyId = document.getElementById(order[i]);
+    console.log(keyId);
+
+    keyObject.target = keyId;
+
+    keyDown(keyObject);
+
+    keyUp(keyObject);
+  }
+});
