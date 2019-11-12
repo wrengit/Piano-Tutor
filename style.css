@@ -19,6 +19,11 @@ body {
 }
 
 /*Styling for the piano layout and keys*/
+
+button:focus {
+    outline: 0;
+}
+
 #piano {
     height: 75vh;
     width: 85vw;
@@ -28,14 +33,20 @@ body {
     height: 100%;
     width: 12%;
     margin: 0.1428%;
+    border: #e9e3d3;
+    border-width: 3px;
+    border-style: outset;
 }
 
 .sharp {
-    background-color: #000000;
+    background-color: #313131;
     height: 45%;
     width: 7%;
     position: absolute;
     top: 20vh;
+    border: #363636;
+    border-width: 5px;
+    border-style: outset;
 }
 /* Places sharp keys in correct location*/
 #csharp-key {
