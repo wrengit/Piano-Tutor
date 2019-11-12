@@ -1,7 +1,7 @@
 body {
-    background-color: #6a6d9c;
     height: 100%;
     width: 100%;
+    background-color: #b4a9d1;
 }
 
 .menu {
@@ -16,6 +16,16 @@ body {
     border-color: black;
     border-style: solid;
     
+}
+
+#main-image {
+    background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    color: #f8f4ef;
 }
 
 /*Styling for the piano layout and keys*/
@@ -34,7 +44,7 @@ button:focus {
     width: 12%;
     margin: 0.1428%;
     border: #e9e3d3;
-    border-width: 3px;
+    border-width: 7px;
     border-style: outset;
 }
 
@@ -45,7 +55,7 @@ button:focus {
     position: absolute;
     top: 20vh;
     border: #363636;
-    border-width: 5px;
+    border-width: 12px;
     border-style: outset;
 }
 /* Places sharp keys in correct location*/
