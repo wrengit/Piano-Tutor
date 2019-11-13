@@ -43,7 +43,7 @@ const keyDown = key => {
   stopAudio(targetPlayAudio); // resets audio track if pressed before audio finished
   targetPlayAudio.play(); // plays audio on keypress
   key.target.setAttribute("style", "background-color: orange; border: orange"); // indicates key has been pressed visually
-  $("#notebox").html(key.target.getAttribute("data-note"));// fetch and pass note displayed in notebox above piano
+  $("#notebox").html(key.target.getAttribute("data-note")); // fetch and pass note displayed in notebox above piano
 };
 
 /* Events trigged on a key being released */
@@ -70,13 +70,25 @@ notes.forEach(keyPress);
 
 /* Game */
 
-const testSong = ["c-key", "a-key", "b-key", "c-key", "b-key", "b-key"];
+const testSong = ["c-key", "a-key", "b-key", "d-key", "chigh-key", "f-key"];
 
-$("#startTutor").click(function() {
+function sleep(milliseconds) {
+  //https://www.sitepoint.com/delay-sleep-pause-wait/
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if (new Date().getTime() - start > milliseconds) {
+      break;
+    }
+  }
+}
+
+$("#startTutor").click(startTutorDemo);
+
+function startTutorDemo() {
   let order = testSong;
   let keyObject = {};
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 4; i++) {
     keyId = document.getElementById(order[i]);
     console.log(keyId);
 
@@ -85,5 +97,9 @@ $("#startTutor").click(function() {
     keyDown(keyObject);
 
     keyUp(keyObject);
+
+    //sleep(1000);
   }
-});
+}
+
+
