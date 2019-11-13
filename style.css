@@ -1,106 +1,105 @@
 body {
-    height: 100%;
-    width: 100%;
-    background-color: #b4a9d1;
+  height: 100%;
+  width: 100%;
+  background-color: #b4a9d1;
 }
 
 .menu {
-    height: 20vh;
-    text-align: center;
+  height: 20vh;
+  text-align: center;
 }
 
-#notebox { 
-    height: 18vh;
-    width: 9vw;
-    border: 2px;
-    border-color: black;
-    border-style: solid;
-    
+#notebox {
+  height: 18vh;
+  width: 9vw;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
 }
 
 #main-image {
-    background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text {
-    color: #f8f4ef;
+  color: #f8f4ef;
 }
 
 /*Styling for the piano layout and keys*/
 
 button:focus {
-    outline: 0;
+  outline: 0;
 }
 
 #piano {
-    height: 75vh;
-    width: 85vw;
+  height: 75vh;
+  width: 85vw;
 }
 .key {
-    background-color: #f8f2e0;
-    height: 100%;
-    width: 12%;
-    margin: 0.1428%;
-    border: #e9e3d3;
-    border-width: 7px;
-    border-style: outset;
+  background-color: #f8f2e0;
+  height: 100%;
+  width: 12%;
+  margin: 0.1428%;
+  border: #e9e3d3;
+  border-width: 7px;
+  border-style: outset;
 }
 
 .sharp {
-    background-color: #313131;
-    height: 45%;
-    width: 7%;
-    position: absolute;
-    top: 20vh;
-    border: #363636;
-    border-width: 12px;
-    border-style: outset;
+  background-color: #313131;
+  height: 45%;
+  width: 7%;
+  position: absolute;
+  top: 20vh;
+  border: #363636;
+  border-width: 12px;
+  border-style: outset;
 }
 /* Places sharp keys in correct location*/
 #csharp-key {
-    left: 14.2%;
+  left: 14.2%;
 }
 
 #dsharp-key {
-    left: 24.7%;
+  left: 24.7%;
 }
 
 #fsharp-key {
-    left: 45.7%;
+  left: 45.7%;
 }
 
 #gsharp-key {
-    left: 56.2%;
+  left: 56.2%;
 }
 
 #asharp-key {
-    left: 66.5%;
+  left: 66.5%;
 }
 
 /*Landing page styling*/
-#landing-page{
-    height: 100vh;
+#landing-page {
+  height: 100vh;
 }
 
 .landing-box {
-    border-radius: 5px;
-    border-style: solid;
-    border-color: white;
-    width: 90vw;
-    height: 40vh;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  width: 90vw;
+  height: 40vh;
 }
 
 /*Custom media queries*/
-@media (orientation:portrait) {
-    .landscape {
-        display: none;
-    }
+@media (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
 }
 
-@media (orientation:landscape) {
-    #lp-portrait {
-        display: none;
-    }
+@media (orientation: landscape) {
+  #lp-portrait {
+    display: none;
+  }
 }
