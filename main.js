@@ -70,36 +70,28 @@ notes.forEach(keyPress);
 
 /* Game */
 
-const testSong = ["c-key", "a-key", "b-key", "d-key", "chigh-key", "f-key"];
-
-function sleep(milliseconds) {
-  //https://www.sitepoint.com/delay-sleep-pause-wait/
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if (new Date().getTime() - start > milliseconds) {
-      break;
-    }
-  }
-}
+const testSong = ["c-key", "f-key", "d-key", "chigh-key"];
 
 $("#startTutor").click(startTutorDemo);
 
 function startTutorDemo() {
   let order = testSong;
   let keyObject = {};
+  let keyObjPrev = {};
+  for (let i = 0; i < testSong.length; i++) {
+    //https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop
+    (function(i) {
+      setTimeout(function() {
+        keyId = document.getElementById(order[i]);
+        keyIdPrev = document.getElementById(order[i - 1]);
+        keyObject.target = keyId;
+        keyObjPrev.target = keyIdPrev;
 
-  for (let i = 0; i < 4; i++) {
-    keyId = document.getElementById(order[i]);
-    console.log(keyId);
+        keyDown(keyObject);
 
-    keyObject.target = keyId;
-
-    keyDown(keyObject);
-
-    keyUp(keyObject);
-
-    //sleep(1000);
+        keyUp(keyObjPrev);
+      }, 750 * i);
+      console.log("hello");
+    })(i);
   }
 }
-
-
