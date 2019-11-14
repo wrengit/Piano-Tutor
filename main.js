@@ -69,29 +69,70 @@ const keyPress = note => {
 notes.forEach(keyPress);
 
 /* Game */
-
-const testSong = ["c-key", "f-key", "d-key", "chigh-key"];
+const testSong = ["c-key", "c-key", "d-key", "chigh-key"]; // Array with stored songs
+const frereJacques = [
+  { note: "c-key", time: 0 }, //0 = 0 sec (starts)
+  { note: "d-key", time: 1 }, //1 = 1 second
+  { note: "e-key", time: 2 }, //2 = 2 seconds
+  { note: "c-key", time: 3 }, //3 = 3 seconds
+  { note: "c-key", time: 4 },
+  { note: "d-key", time: 5 },
+  { note: "e-key", time: 6 },
+  { note: "c-key", time: 7 },
+  { note: "e-key", time: 8 },
+  { note: "f-key", time: 9 },
+  { note: "g-key", time: 10 },
+  { note: "e-key", time: 12 },
+  { note: "f-key", time: 13 },
+  { note: "g-key", time: 14 },
+  { note: "g-key", time: 16 },
+  { note: "a-key", time: 16.5 },
+  { note: "g-key", time: 17 },
+  { note: "f-key", time: 17.5 },
+  { note: "e-key", time: 18 },
+  { note: "c-key", time: 19 },
+  { note: "g-key", time: 20 },
+  { note: "a-key", time: 20.5 },
+  { note: "g-key", time: 21 },
+  { note: "f-key", time: 21.5 },
+  { note: "e-key", time: 22 },
+  { note: "c-key", time: 23 },
+  { note: "c-key", time: 24 },
+  { note: "g-key", time: 25 },
+  { note: "c-key", time: 26 },
+  { note: "c-key", time: 28 },
+  { note: "g-key", time: 29 },
+  { note: "c-key", time: 30 },
+];
 
 $("#startTutor").click(startTutorDemo);
 
+/*Iterates through the song array, and simulates a user click on each key. (https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop)*/
 function startTutorDemo() {
-  let order = testSong;
-  let keyObject = {};
-  let keyObjPrev = {};
-  for (let i = 0; i < testSong.length; i++) {
-    //https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop
-    (function(i) {
-      setTimeout(function() {
-        keyId = document.getElementById(order[i]);
-        keyIdPrev = document.getElementById(order[i - 1]);
+  let order = frereJacques; //loads the selected song into the function
+  let keyObject = {}; //asigns the key buttons(html) as an object
+  let speed = 500;
+  for (let i = 0; i < order.length; i++) {
+    let correctTiming = order[i].time * speed;
+    (i => {
+      setTimeout(() => {
+        //first setTimeout delays time between notes played
+        keyId = document.getElementById(order[i].note);
         keyObject.target = keyId;
-        keyObjPrev.target = keyIdPrev;
-
+        (() => {
+          setTimeout(() => {
+            //second setTimeout simulates time the key is held down
+            keyUp(keyObject);
+          }, speed/2.5 );
+        })();
         keyDown(keyObject);
-
-        keyUp(keyObjPrev);
-      }, 750 * i);
-      console.log("hello");
+      }, correctTiming);
     })(i);
   }
 }
+
+/*if (Number.isInteger(order[i].time)){
+ return speed
+} else {
+  return speed / 2
+}*/
