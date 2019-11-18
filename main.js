@@ -111,9 +111,11 @@ function tutorDemo() {
   let order = frereJacques; //loads the selected song into the function
   let keyObject = {}; //asigns the key buttons(html) as an object
   let speed = 500; //speed that the demo play
-  let barLength = $("select#bar-select").val();
+  let barLength = $("select#bar-select").val() * 4; //user selects length of demo (4 beats per bar)
   for (let i = 0; i < order.length; i++) {
-    if (i == barLength) {
+    let barLengthCorrected = barLength + i - order[i].time;
+    if (i == barLengthCorrected) {
+      // stops demo at chosen length
       break;
     }
     let correctTiming = order[i].time * speed;
