@@ -69,12 +69,11 @@ const keyPress = note => {
 notes.forEach(keyPress);
 
 /* Game */
-const testSong = ["c-key", "c-key", "d-key", "chigh-key"]; // Array with stored songs
 const frereJacques = [
-  { note: "c-key", time: 0 }, //0 = 0 sec (starts)
-  { note: "d-key", time: 1 }, //1 = 1 second
-  { note: "e-key", time: 2 }, //2 = 2 seconds
-  { note: "c-key", time: 3 }, //3 = 3 seconds
+  { note: "c-key", time: 0 },
+  { note: "d-key", time: 1 },
+  { note: "e-key", time: 2 },
+  { note: "c-key", time: 3 },
   { note: "c-key", time: 4 },
   { note: "d-key", time: 5 },
   { note: "e-key", time: 6 },
@@ -102,17 +101,21 @@ const frereJacques = [
   { note: "c-key", time: 26 },
   { note: "c-key", time: 28 },
   { note: "g-key", time: 29 },
-  { note: "c-key", time: 30 },
+  { note: "c-key", time: 30 }
 ];
 
-$("#startTutor").click(startTutorDemo);
+$("#startTutor").click(tutorDemo);
 
 /*Iterates through the song array, and simulates a user click on each key. (https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop)*/
-function startTutorDemo() {
+function tutorDemo() {
   let order = frereJacques; //loads the selected song into the function
   let keyObject = {}; //asigns the key buttons(html) as an object
-  let speed = 500;
+  let speed = 500; //speed that the demo play
+  let barLength = $("select#bar-select").val();
   for (let i = 0; i < order.length; i++) {
+    if (i == barLength) {
+      break;
+    }
     let correctTiming = order[i].time * speed;
     (i => {
       setTimeout(() => {
@@ -123,16 +126,10 @@ function startTutorDemo() {
           setTimeout(() => {
             //second setTimeout simulates time the key is held down
             keyUp(keyObject);
-          }, speed/2.5 );
+          }, speed / 2.5);
         })();
         keyDown(keyObject);
       }, correctTiming);
     })(i);
   }
 }
-
-/*if (Number.isInteger(order[i].time)){
- return speed
-} else {
-  return speed / 2
-}*/
