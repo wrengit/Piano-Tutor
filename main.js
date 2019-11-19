@@ -1,6 +1,3 @@
-$(function() {
-  FastClick.attach(document.body);
-});
 
 /* Pushes the key id's into the notes array, making all piano key divs available to notes array */
 const keys = [
