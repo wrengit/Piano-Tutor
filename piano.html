@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Piano Game</title>
     <link
@@ -15,19 +15,28 @@
     <!--menu items-->
     <section class="container-fluid menu">
       <div class="row h-100">
-        <div class="col-3 my-auto">navigate to main menu</div>
-        <div class="col-3 my-auto mx-auto" id="notebox"></div>
-        <select class="btn btn-secondary mt-4 mx-auto" id="bar-select">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8" selected>8</option>
+        <a class="col-2 my-auto btn btn-info m-auto" href="index.html"
+          >Main menu</a
+        >
+        <div class="col-2 m-auto" id="notebox"></div>
+        <select class="col-3 btn btn-light m-auto" id="speed-select">
+          <option value="800">Slow speed</option>
+          <option value="500" selected>Normal speed</option>
+          <option value="300">Fast speed</option>
         </select>
-        <button class="col-3 my-auto" id="startTutor">Start button</button>
+        <select class="col-2 btn btn-light m-auto" id="bar-select">
+          <option value="1">1 bar</option>
+          <option value="2">2 bars</option>
+          <option value="3">3 bars</option>
+          <option value="4">4 bars</option>
+          <option value="5">5 bars</option>
+          <option value="6">6 bars</option>
+          <option value="7">7 bars</option>
+          <option value="8" selected>Full song</option>
+        </select>
+        <button class="col-2 btn btn-success m-auto" id="startTutor">
+          Start button
+        </button>
       </div>
     </section>
 

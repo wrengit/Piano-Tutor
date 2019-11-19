@@ -10,12 +10,17 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
 #notebox {
-  height: 18vh;
-  width: 9vw;
+  height: 10vh;
   border: 2px;
   border-color: black;
   border-style: solid;
+  text-align: center;
+  font-size: 1.6em;
+  justify-content: center;
 }
 
 #main-image {
