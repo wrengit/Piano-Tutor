@@ -58,18 +58,15 @@ const keyUp = key => {
 
 /* Assigns the keyDown and keyUp variables to pointer events and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow finger input on touchscreen laptops */
 const keyPress = note => {
-  note.onmousedown = () => {
+  note.onpointerdown = () => {
     keyDown(event);
   };
- // note.onpointerdown = () => {
- //   keyDown(event);
- // };
-  note.onmouseup = () => {
+  note.onpointerup = () => {
     keyUp(event);
   };
-  /*note.onmouseleave = () => {
+  note.onpointerleave = () => {
     keyUp(event);
-  };*/
+  };
 };
 
 /* Makes the keyPress variable available to all the key divs that were pushed to the notes array */
