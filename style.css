@@ -2,7 +2,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #b4a9d1;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 .menu {
