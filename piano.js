@@ -1,4 +1,3 @@
-
 /* Pushes the key id's into the notes array, making all piano key divs available to notes array */
 const keys = [
   "c-key",
@@ -69,50 +68,19 @@ const keyPress = note => {
 /* Makes the keyPress variable available to all the key divs that were pushed to the notes array */
 notes.forEach(keyPress);
 
-/* Game */
-const frereJacques = [
-  { note: "c-key", time: 0 },
-  { note: "d-key", time: 1 },
-  { note: "e-key", time: 2 },
-  { note: "c-key", time: 3 },
-  { note: "c-key", time: 4 },
-  { note: "d-key", time: 5 },
-  { note: "e-key", time: 6 },
-  { note: "c-key", time: 7 },
-  { note: "e-key", time: 8 },
-  { note: "f-key", time: 9 },
-  { note: "g-key", time: 10 },
-  { note: "e-key", time: 12 },
-  { note: "f-key", time: 13 },
-  { note: "g-key", time: 14 },
-  { note: "g-key", time: 16 },
-  { note: "a-key", time: 16.5 },
-  { note: "g-key", time: 17 },
-  { note: "f-key", time: 17.5 },
-  { note: "e-key", time: 18 },
-  { note: "c-key", time: 19 },
-  { note: "g-key", time: 20 },
-  { note: "a-key", time: 20.5 },
-  { note: "g-key", time: 21 },
-  { note: "f-key", time: 21.5 },
-  { note: "e-key", time: 22 },
-  { note: "c-key", time: 23 },
-  { note: "c-key", time: 24 },
-  { note: "g-key", time: 25 },
-  { note: "c-key", time: 26 },
-  { note: "c-key", time: 28 },
-  { note: "g-key", time: 29 },
-  { note: "c-key", time: 30 }
-];
+/* Tutor function */
+
+
 
 $("#startTutor").click(tutorDemo);
 
+
 /*Iterates through the song array, and simulates a user click on each key. (https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop)*/
 function tutorDemo() {
-  let order = frereJacques; //loads the selected song into the function
   let keyObject = {}; //asigns the key buttons(html) as an object
   let speed = $("select#speed-select").val(); //speed that the demo play
   let barLength = $("select#bar-select").val() * 4; //user selects length of demo (4 beats per bar)
+  let order = frereJacques;
   for (let i = 0; i < order.length; i++) {
     let barLengthCorrected = barLength + i - order[i].time;
     if (i == barLengthCorrected) {
