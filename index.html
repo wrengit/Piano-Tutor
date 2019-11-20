@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Piano Game</title>
     <link
@@ -31,13 +31,17 @@
         </div>
         <div class="col-4 landscape text-center">
           <div>
-            <button type="button" class="btn btn-success mb-4 mx-auto">
+            <a
+              href="piano.html"
+              class="btn btn-success mb-4 mx-auto"
+              id="start-piano"
+            >
               Start Piano
-            </button>
+            </a>
           </div>
           <select class="btn btn-secondary mt-4 mx-auto" id="dropdown-menu">
-            <option value="free_play" selected>Free Play</option>
-            <option value="song_1">Song 1</option>
+            <option value="free_play">Free Play</option>
+            <option value="frereJacques" selected>Frere Jacques</option>
             <option value="song_2">Song 2</option>
             <option value="song_3">Song 3</option>
           </select>
@@ -60,6 +64,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script src="songs.js"></script>
   </body>
 </html>
