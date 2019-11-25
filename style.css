@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Baskervville|Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Baskervville|Comfortaa&display=swap");
 
 body {
   height: 100%;
@@ -20,7 +20,6 @@ a {
   text-align: center;
   font-size: 6vh;
   justify-content: center;
-
 }
 
 #main-image {
@@ -31,7 +30,7 @@ a {
 
 .text {
   color: #e9e3d3;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 /*Styling for the piano layout and keys*/
