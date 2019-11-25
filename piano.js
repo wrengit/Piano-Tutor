@@ -52,7 +52,7 @@ const keyUp = key => {
   timerNoteDelay();
 };
 
-/* Assigns the keyDown and keyUp variables to pointer events and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow finger input on touchscreen laptops */
+/* Assigns the keyDown and keyUp variables to pointer events and tutorDemo and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow finger input on touchscreen laptops */
 const keyPress = note => {
   note.onpointerdown = () => {
     keyDown(event);
@@ -68,34 +68,38 @@ const keyPress = note => {
 /* Makes the keyPress variable available to all the key divs that were pushed to the notes array */
 notes.forEach(keyPress);
 
-/* Tutor function */
-
-
-
 $("#startTutor").click(tutorDemo);
 
+/*
+tutorDemo
 
-/*Iterates through the song array, and simulates a user click on each key. (https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop)*/
+Iterates through the song array, and simulates a user click on each key.
+- keyObject asigns the key buttons(html) as an object
+- speed changes the demo play speed
+- barLength changes how much of the song is played in the demo (4 beats per bar)
+'if' statement breaks the song loop when the barLength is reached
+'setTimeout' example was learnt from 'https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop', and modified
+First 'setTimeout' sets the delay between notes. This is modified by the 'correctTiming' variable, which uses the 'time' value of the song array
+Second 'setTimeout' simulates time the key is held down (colour highlighting)
+*/
+
 function tutorDemo() {
-  let keyObject = {}; //asigns the key buttons(html) as an object
-  let speed = $("select#speed-select").val(); //speed that the demo play
-  let barLength = $("select#bar-select").val() * 4; //user selects length of demo (4 beats per bar)
+  let keyObject = {};
+  let speed = $("select#speed-select").val();
+  let barLength = $("select#bar-select").val() * 4;
   let order = frereJacques;
   for (let i = 0; i < order.length; i++) {
     let barLengthCorrected = barLength + i - order[i].time;
     if (i == barLengthCorrected) {
-      // stops demo at chosen length
       break;
     }
     let correctTiming = order[i].time * speed;
     (i => {
       setTimeout(() => {
-        //first setTimeout delays time between notes played
         keyId = document.getElementById(order[i].note);
         keyObject.target = keyId;
         (() => {
           setTimeout(() => {
-            //second setTimeout simulates time the key is held down
             keyUp(keyObject);
           }, speed / 2.5);
         })();
