@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--orientation warning-->
+    <section class="portrait text landing-box">
+      <h3>Please rotate your device</h3>
+      <h4>This site works best in landscape mode</h4>
+    </section>
     <!--menu items-->
-    <section class="container-fluid menu">
+    <section class="container-fluid menu landscape">
       <div class="row h-100">
-        <a class="col-2 my-auto btn btn-info m-auto" href="index.html"
-          >Menu</a
-        >
-        <div class="col-2 m-auto" id="notebox"></div>
+        <a class="col-2 my-auto btn btn-light m-auto" href="index.html">Menu</a>
+        <div class="col-2 m-auto text" id="notebox"></div>
         <select class="col-3 btn btn-light m-auto" id="speed-select">
           <option value="800">Slow speed</option>
           <option value="500" selected>Normal speed</option>
@@ -41,10 +44,10 @@
     </section>
 
     <!--Single octave piano keys-->
-    <section class="container-fluid">
+    <section class="container-fluid landscape">
       <div class="row mx-auto" id="piano">
         <button
-          class="key rounded-bottom m-0"
+          class="key rounded-bottom m-0 ml-3"
           id="c-key"
           data-note="C"
           data-sound="middle-C-sound"
@@ -122,8 +125,11 @@
           data-sound="highC-sound"
         ></button>
       </div>
+      <div class="row pt-2">
+        <button class="col-2 mx-auto" id="fullscreen-button">Toggle fullscreen</button>
+      </div>
     </section>
-
+    
     <!--audio files play when triggered by keypress-->
     <section>
       <audio
@@ -177,6 +183,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fullscreen-plugin/1.1.4/jquery.fullscreen-min.js"></script>
     <script src="piano.js"></script>
     <script src="songs.js"></script>
   </body>
