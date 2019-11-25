@@ -1,3 +1,4 @@
+
 /* Pushes the key id's into the notes array, making all piano key divs available to notes array */
 const keys = [
   "c-key",
@@ -108,3 +109,11 @@ function tutorDemo() {
     })(i);
   }
 }
+
+/*https://github.com/kayahr/jquery-fullscreen-plugin/*/
+
+function toggleFullscreen(){
+   $(document).toggleFullScreen();
+}
+$("#fullscreen-button").click(toggleFullscreen);
+
