@@ -8,7 +8,7 @@ body {
 }
 
 .menu {
-  height: 20vh;
+  height: 29vh;
   text-align: center;
 }
 
@@ -16,16 +16,10 @@ a {
   text-decoration: none;
 }
 #notebox {
-  height: 10vh;
+  height: 100%;
   text-align: center;
-  font-size: 6vh;
+  font-size: 10vh;
   justify-content: center;
-}
-
-#main-image {
-  background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .text {
@@ -60,7 +54,6 @@ button:focus {
   max-height: 300px;
   width: 7%;
   position: absolute;
-  top: 20vh;
   border: #363636;
   border-width: 12px;
   border-style: outset;
