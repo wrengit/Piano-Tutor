@@ -68,7 +68,16 @@ const keyPress = note => {
 /* Makes the keyPress variable available to all the key divs that were pushed to the notes array */
 notes.forEach(keyPress);
 
-$("#startTutor").click(tutorDemo);
+$(document).ready(() => {
+  $("#startTutor").click(function() {
+    tutorDemo();
+    let start = this;
+    start.disabled = true;
+    setTimeout(() => {
+      start.disabled = false;
+    }, 4000);
+  });
+});
 
 /*
 tutorDemo
