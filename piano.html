@@ -18,28 +18,46 @@
       <h4>This site works best in landscape mode</h4>
     </section>
     <!--menu items-->
-    <section class="container-fluid menu landscape">
-      <div class="row h-100">
-        <a class="col-2 my-auto btn btn-light m-auto" href="index.html">Menu</a>
-        <div class="col-2 m-auto text" id="notebox"></div>
-        <select class="col-3 btn btn-light m-auto" id="speed-select">
-          <option value="800">Slow speed</option>
-          <option value="500" selected>Normal speed</option>
-          <option value="300">Fast speed</option>
-        </select>
-        <select class="col-2 btn btn-light m-auto" id="bar-select">
-          <option value="1">1 bar</option>
-          <option value="2">2 bars</option>
-          <option value="3">3 bars</option>
-          <option value="4">4 bars</option>
-          <option value="5">5 bars</option>
-          <option value="6">6 bars</option>
-          <option value="7">7 bars</option>
-          <option value="8" selected>8 bars</option>
-        </select>
-        <button class="col-1 btn btn-success m-auto" id="startTutor">
-          Go
-        </button>
+
+    <section class="container-fluid menu landscape ">
+      <div class="row h-100 align-items-center">
+        <div class="col-4">
+          <a class="col-5 btn btn-light btn-sm mb-1 mr-2" href="index.html"
+            >Menu</a
+          >
+          <button class="col-5 btn btn-success btn-sm mb-1" id="startTutor">
+            Go</button
+          ><button
+            class="col-8 btn btn-outline-secondary btn-sm mt-1"
+            aria-pressed="false"
+            data-toggle="button"
+            id="fullscreen-button"
+          >
+            Fullscreen
+          </button>
+          <button class="col-2 btn btn-light btn-sm mt-1 ml-2">?</button>
+        </div>
+        <div class="col 3">
+          <div class="col-12 text" id="notebox"></div>
+        </div>
+
+        <div class="col-3 justify-content-center">
+          <select class="col btn btn-light btn-sm" id="speed-select">
+            <option value="800">Slow</option>
+            <option value="500" selected>Normal</option>
+            <option value="300">Fast</option>
+          </select>
+          <select class="col btn btn-light btn-sm mt-2" id="bar-select">
+            <option value="1">1 bar</option>
+            <option value="2">2 bars</option>
+            <option value="3">3 bars</option>
+            <option value="4">4 bars</option>
+            <option value="5">5 bars</option>
+            <option value="6">6 bars</option>
+            <option value="7">7 bars</option>
+            <option value="8" selected>8 bars</option>
+          </select>
+        </div>
       </div>
     </section>
 
@@ -125,11 +143,8 @@
           data-sound="highC-sound"
         ></button>
       </div>
-      <div class="row pt-2">
-        <button class="col-2 mx-auto btn btn-outline-secondary btn-sm" aria-pressed="false" data-toggle="button" id="fullscreen-button">Toggle fullscreen</button>
-      </div>
     </section>
-    
+
     <!--audio files play when triggered by keypress-->
     <section>
       <audio
