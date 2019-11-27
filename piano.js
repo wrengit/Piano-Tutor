@@ -42,7 +42,10 @@ const keyDown = key => {
   let targetPlayAudio = document.getElementById(playAudio); // matches the data-sound info the ID of the audio track
   stopAudio(targetPlayAudio); // resets audio track if pressed before audio finished
   targetPlayAudio.play(); // plays audio on keypress
-  key.target.setAttribute("style", "background-color: orange; border: orange"); // indicates key has been pressed visually
+  key.target.setAttribute(
+    "style",
+    "background-color: #ffa500; border: #dd9103; border-width: 5px; border-style: outset"
+  ); // indicates key has been pressed visually
   $("#notebox").html(key.target.getAttribute("data-note")); // fetch and pass note displayed in notebox above piano
 };
 
