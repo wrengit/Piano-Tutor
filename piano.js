@@ -1,4 +1,3 @@
-
 /* Pushes the key id's into the notes array, making all piano key divs available to notes array */
 const keys = [
   "c-key",
@@ -74,7 +73,7 @@ $("#startTutor").click(tutorDemo);
 /*
 tutorDemo
 
-Iterates through the song array, and simulates a user click on each key.
+Iterates through the song array, and simulates a user click on each key
 - keyObject asigns the key buttons(html) as an object
 - speed changes the demo play speed
 - barLength changes how much of the song is played in the demo (4 beats per bar)
@@ -91,10 +90,10 @@ function tutorDemo() {
   let order = frereJacques;
   for (let i = 0; i < order.length; i++) {
     let barLengthCorrected = barLength + i - order[i].time;
+    let correctTiming = order[i].time * speed;
     if (i == barLengthCorrected) {
       break;
     }
-    let correctTiming = order[i].time * speed;
     (i => {
       setTimeout(() => {
         keyId = document.getElementById(order[i].note);
@@ -112,8 +111,7 @@ function tutorDemo() {
 
 /*https://github.com/kayahr/jquery-fullscreen-plugin/*/
 
-function toggleFullscreen(){
-   $(document).toggleFullScreen();
+function toggleFullscreen() {
+  $(document).toggleFullScreen();
 }
 $("#fullscreen-button").click(toggleFullscreen);
-
