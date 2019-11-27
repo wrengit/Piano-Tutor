@@ -7,19 +7,24 @@
     <title>JavaScript Piano Game</title>
     <link
       rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="landing-box text portrait">
-      <h3>Please rotate your device</h3>
+    <section class="landing-box text portrait align-items-center">
+      <h2>Please rotate your device</h2>
       <h4>This site works best in landscape mode</h4>
     </section>
-    <section class="container-fluid h-100 landscape">
+    <section class="container-fluid h-100 landscape" id="landing-page">
+      <div class="row grey"></div>
       <div
-        class="row mx-auto align-items-center justify-content-center"
-        id="landing-page"
+        class="row align-items-center justify-content-center"
+        id="landing-content"
       >
         <div class="col-8 text" id="heading">
           <h1>Piano tutor</h1>
@@ -45,6 +50,17 @@
             >
             <option value="song_3">Song 3</option>
           </select>
+        </div>
+      </div>
+      <div class="row grey align-items-center text-center" id="footer">
+        <div class="col-4 text">
+          <a
+            href="https://github.com/wrengit"
+            rel="noopener"
+            target="_blank"
+            aria-label="Wren designs link"
+            >Copyright <i class="fa fa-copyright"></i> wren designs 2019</a
+          >
         </div>
       </div>
     </section>

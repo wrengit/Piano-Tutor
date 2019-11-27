@@ -14,12 +14,11 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
-#notebox {
-  height: 100%;
-  text-align: center;
-  font-size: 10vh;
-  justify-content: center;
+
+.grey {
+  height: 20vh;
 }
 
 .text {
@@ -27,10 +26,32 @@ a {
   font-family: "Comfortaa", cursive;
 }
 
+#landing-page {
+  background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landing-content {
+  height: 60vh;
+  background-color: #1e1e1f63;
+}
+
+.landing-box {
+  padding: 25% 15%;
+  margin-top: 20%;
+}
 /*Styling for the piano layout and keys*/
 
 button:focus {
   outline: 0;
+}
+
+#notebox {
+  height: 100%;
+  text-align: center;
+  font-size: 10vh;
+  justify-content: center;
 }
 
 #piano {
@@ -79,14 +100,10 @@ button:focus {
   left: 66.4%;
 }
 
-/*Landing page styling*/
-#landing-page {
-  height: 100vh;
-}
+/*Footer styling*/
 
-.landing-box {
-  padding: 25% 15%;
-  margin-top: 20%;
+#footer {
+  font-size: 1rem;
 }
 
 /*Custom media queries*/
@@ -99,5 +116,20 @@ button:focus {
 @media (orientation: landscape) {
   .portrait {
     display: none;
+  }
+}
+
+@media (max-width: 786px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  #footer {
+    font-size: 0.5rem;
   }
 }
