@@ -77,6 +77,8 @@ Iterates through the song array, and simulates a user click on each key
 - keyObject asigns the key buttons(html) as an object
 - speed changes the demo play speed
 - barLength changes how much of the song is played in the demo (4 beats per bar)
+- storageVar pulls the sond data string from local storage
+- order parses storageVar into an array of objects
 'if' statement breaks the song loop when the barLength is reached
 'setTimeout' example was learnt from 'https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop', and modified
 First 'setTimeout' sets the delay between notes. This is modified by the 'correctTiming' variable, which uses the 'time' value of the song array
@@ -87,7 +89,8 @@ function tutorDemo() {
   let keyObject = {};
   let speed = $("select#speed-select").val();
   let barLength = $("select#bar-select").val() * 4;
-  let order = frereJacques;
+  let storageVar = window.localStorage.getItem("selectedSong");
+  let order = JSON.parse(storageVar);
   for (let i = 0; i < order.length; i++) {
     let barLengthCorrected = barLength + i - order[i].time;
     let correctTiming = order[i].time * speed;
