@@ -49,13 +49,13 @@ const keyDown = key => {
   $("#notebox").html(key.target.getAttribute("data-note")); // fetch and pass note displayed in notebox above piano
 };
 
-/* Events trigged on a key being released */
+/* Events triggered on a key being released */
 const keyUp = key => {
   key.target.setAttribute("style", "background-color: ; border: ");
   timerNoteDelay();
 };
 
-/* Assigns the keyDown and keyUp variables to pointer events and tutorDemo and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow finger input on touchscreen laptops */
+/* Assigns the keyDown and keyUp variables to pointer events and tutorDemo and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow multi-finger input on touchscreen laptops */
 const keyPress = note => {
   note.onpointerdown = () => {
     keyDown(event);
@@ -71,6 +71,7 @@ const keyPress = note => {
 /* Makes the keyPress variable available to all the key divs that were pushed to the notes array */
 notes.forEach(keyPress);
 
+/*Starts the tutorDemo function on press of the 'Go' button. Disables the 'Go' button for 4 seconds to prevent additional presses*/
 $(document).ready(() => {
   $("#startTutor").click(function() {
     tutorDemo();
@@ -89,7 +90,7 @@ Iterates through the song array, and simulates a user click on each key
 - keyObject asigns the key buttons(html) as an object
 - speed changes the demo play speed
 - barLength changes how much of the song is played in the demo (4 beats per bar)
-- storageVar pulls the sond data string from local storage
+- storageVar pulls the song data string from local storage
 - order parses storageVar into an array of objects
 'if' statement breaks the song loop when the barLength is reached
 'setTimeout' example was learnt from 'https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop', and modified
@@ -124,7 +125,7 @@ function tutorDemo() {
   }
 }
 
-/*https://github.com/kayahr/jquery-fullscreen-plugin/*/
+/*Uses (https://github.com/kayahr/jquery-fullscreen-plugin/) to toggle fullscreen view*/
 
 function toggleFullscreen() {
   $(document).toggleFullScreen();

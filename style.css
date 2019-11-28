@@ -17,7 +17,7 @@ a {
   color: inherit;
 }
 
-.grey {
+.strip {
   height: 20vh;
 }
 
@@ -37,9 +37,10 @@ a {
   background-color: #1e1e1f63;
 }
 
-.landing-box {
+#landing-box {
   padding: 25% 15%;
   margin-top: 20%;
+  margin-left: 5%;
 }
 /*Styling for the piano layout and keys*/
 
@@ -119,9 +120,12 @@ button:focus {
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
   h3 {
     font-size: 1rem;

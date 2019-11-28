@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Piano Game</title>
+    <title>JavaScript Piano Tutor</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,22 +16,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="landing-box text portrait align-items-center">
+    <!--info requesting change of screen orientation-->
+    <section class="text portrait align-items-center" id="landing-box">
       <h2>Please rotate your device</h2>
       <h4>This site works best in landscape mode</h4>
     </section>
+    <!--main menu and landing page-->
     <section class="container-fluid h-100 landscape" id="landing-page">
-      <div class="row grey"></div>
+      <div class="row strip"></div>
       <div
         class="row align-items-center justify-content-center"
         id="landing-content"
       >
         <div class="col-8 text" id="heading">
           <h1>Piano tutor</h1>
-          <h3>A simple, single octave piano with songs to play along with.</h3>
-          <h4>
+          <h2>A simple, single octave piano with songs to play along with.</h2>
+          <h3>
             Select a song and press play to start.
-          </h4>
+          </h3>
         </div>
         <div class="col-4 text-center">
           <div>
@@ -39,6 +41,7 @@
               Play
             </button>
           </div>
+          <!--dropdown menu with song select. Song notes and timing are stored in the value as a string-->
           <select class="btn btn-light mt-4 mx-auto" id="dropdown-menu">
             <option
               value='[{"note":"c-key","time":0},{"note":"d-key","time":1},{"note":"e-key","time":2},{"note":"c-key","time":3},{"note":"c-key","time":4},{"note":"d-key","time":5},{"note":"e-key","time":6},{"note":"c-key","time":7},{"note":"e-key","time":8},{"note":"f-key","time":9},{"note":"g-key","time":10},{"note":"e-key","time":12},{"note":"f-key","time":13},{"note":"g-key","time":14},{"note":"g-key","time":16},{"note":"a-key","time":16.5},{"note":"g-key","time":17},{"note":"f-key","time":17.5},{"note":"e-key","time":18},{"note":"c-key","time":19},{"note":"g-key","time":20},{"note":"a-key","time":20.5},{"note":"g-key","time":21},{"note":"f-key","time":21.5},{"note":"e-key","time":22},{"note":"c-key","time":23},{"note":"c-key","time":24},{"note":"g-key","time":25},{"note":"c-key","time":26},{"note":"c-key","time":28},{"note":"g-key","time":29},{"note":"c-key","time":30}]'
@@ -52,7 +55,8 @@
           </select>
         </div>
       </div>
-      <div class="row grey align-items-center text-center" id="footer">
+      <!--footer with link to page creator github-->
+      <div class="row strip align-items-center text-center" id="footer">
         <div class="col-4 text">
           <a
             href="https://github.com/wrengit"
@@ -64,7 +68,7 @@
         </div>
       </div>
     </section>
-
+    <!--scripts used in page-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
