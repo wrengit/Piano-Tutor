@@ -130,4 +130,14 @@ function tutorDemo() {
 function toggleFullscreen() {
   $(document).toggleFullScreen();
 }
+
 $("#fullscreen-button").click(toggleFullscreen);
+
+
+$("#help-button").click(()=> {
+  $("#modal").show();
+})
+
+$("#close-modal").click(()=>{
+  $("#modal").hide();
+})

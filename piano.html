@@ -12,17 +12,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <div class="se-pre-con text">Please wait...</div> 
+    <div class="loading text">Please wait...</div>
+
     <!--orientation warning-->
     <section class="portrait text orient-box">
       <h3>Please rotate your device</h3>
       <h4>This site works best in landscape mode</h4>
     </section>
-    <!--menu items-->
 
+    <!--menu items-->
     <section class="container-fluid menu landscape ">
       <div class="row h-100 align-items-center mx-auto">
-        <div class="col-4 col-md-2">
+        <div class="col-4 col-md-3">
           <a class="col-5 btn btn-light btn-sm mb-1 mr-2" href="index.html"
             >Menu</a
           >
@@ -36,9 +37,9 @@
           >
             Fullscreen
           </button>
-          <button class="col-2 btn btn-light btn-sm mt-1 ml-2">?</button>
+          <button class="col-2 btn btn-light btn-sm mt-1 ml-2" id="help-button">?</button>
         </div>
-        <div class="col-5 col-md-8">
+        <div class="col-5 col-md-7">
           <div class="col-12 text" id="notebox"></div>
         </div>
 
@@ -60,6 +61,19 @@
           </select>
         </div>
       </div>
+    </section>
+
+    <!--Help modal-->
+    <section id="modal">
+      <span class="text" id="close-modal">&times</span>
+      <div class="content text">
+        <p>Change the speed of the song and the length with the dropdown menus (top right)</p>
+        <p>Press "Go" to have the Tutor play the song</p>
+        <p>To change song, return to menu</p>
+        <p>Press the "Fullscreen" button to toggle fullscreen view</p>
+        
+      </div>
+      
     </section>
 
     <!--Single octave piano keys-->
@@ -199,7 +213,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fullscreen-plugin/1.1.4/jquery.fullscreen-min.js"></script>
     <script src="piano.js"></script>
     <script src="songs.js"></script>
