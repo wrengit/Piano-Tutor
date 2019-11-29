@@ -81,15 +81,8 @@ All content was written by me. Audio for the piano sounds were generated in a li
 ### Media
 All images are from [Unsplash](http://unsplash.com), a royalty free, free to use image repository. Photographer credits for the image is below.
 
-* Photo by [sept commercial](https://unsplash.com/@septdoigt)
-* Photo by [Marisa Morton](https://unsplash.com/@poemacollective)
-* Photo by [Eliza Szablinska](https://unsplash.com/@liz_szablinska)
-* Photo by [Stanley Dai](https://unsplash.com/@stanleydai)
-* Photo by [NeONBRAND](https://unsplash.com/@neonbrand)
-* Photo by [Hannah Cook](https://unsplash.com/@hanleigh)
-* Photo by [Carly Rae Hobbins](https://unsplash.com/@carlyrae)
-* Photo by [Ben Rosett](https://unsplash.com/@spiritvisionstudios)
-* Photo by [Banter Snaps](https://unsplash.com/@bantersnaps)
+* Photo by Geert Pieters on [Unsplash](https://unsplash.com/@shotsbywolf)
+
 
 ### Acknowledgements
 
