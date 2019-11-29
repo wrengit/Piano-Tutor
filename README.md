@@ -7,7 +7,8 @@ A simple single octave piano made with Javascript. Has a selection of songs to d
 A link to the project hosted on GitHub Pages can be found [here](https://wrengit.github.io/milestone2/)
 
 ## UX
-A link to the original wireframes can be found [here](https://github.com/wrengit/milestone2/blob/master/assets/Wireframes.pdf)
+A link to the original wireframes can be found [here](https://github.com/wrengit/milestone2/blob/master/assets/Wireframes.pdf).
+
 The site is purposefully simple, with a focus on learning Javascript and the user interaction with the keyboard.
 The UX was designed to be minimalist, and uncluttered, with all attention and screen real-estate dedicated to the piano keys. The site/app was designed to be played primarily on a touch input device, such as a mobile, tablet or touch screen laptop. 
 Colours where chosen to keep attention focused on the keyboard, with a single page, non scrollable view to make use on small screens easier. A landing menu page was used to ensure that the piano page remained uncluttered.
