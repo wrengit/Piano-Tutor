@@ -53,7 +53,7 @@ The process took far longer than expected, whilst learning JavaScript on the go.
 * jQuery full screen plug-in (https://github.com/kayahr/jquery-fullscreen-plugin/)
 
 ## Testing
-* The site was developed on a Dell XPS 13 13" 2-in-1 touch screen laptop. Initial testing was conducted with Brave Browser, Microsoft Edge, and Chrome. Mobile testing used a Huawei P20 pro, using Brave, Chrome, and Firefox. There was no availability of Apple devices, either mobile or desktop to conduct testing. 
+The site was developed on a Dell XPS 13 13" 2-in-1 touch screen laptop. Initial testing was conducted with Brave Browser, Microsoft Edge, and Chrome. Mobile testing used a Huawei P20 pro, using Brave, Chrome, and Firefox. There was no availability of Apple devices, either mobile or desktop to conduct testing. 
 
 All testing was conducted manually.
 
@@ -66,7 +66,7 @@ All testing was conducted manually.
 ### User stories
 > As a user I would like to be able to play a piano on a mobile device.
 >
->> The user can easily user multi-touch input or mouse clicks to trigger audio sounds and play a virtual piano.
+>> The user can easily use multi-touch input or mouse clicks to trigger audio sounds and play a virtual piano.
 
 > As a user I would like to be shown how to play a song, with a visual and audio demonstration.
 >
