@@ -54,6 +54,7 @@ The process took far longer than expected, whilst learning JavaScript on the go.
 
 ## Testing
 * The site was developed on a Dell XPS 13 13" 2-in-1 tuch screen laptop. Initial testing was conducted with Brave Browser, Microsoft Edge, and Chrome. Mobile testing used a Huawei P20 pro, using Brave, Chrome, and Firefox. There was no availablity of Apple devices, either mobile or desktop to conduct testing. 
+
 All testing was conducted manually.
 
 ### Browser compatability
