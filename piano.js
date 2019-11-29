@@ -133,11 +133,10 @@ function toggleFullscreen() {
 
 $("#fullscreen-button").click(toggleFullscreen);
 
-
-$("#help-button").click(()=> {
+$("#help-button").click(() => {
   $("#modal").show();
-})
+});
 
-$("#close-modal").click(()=>{
+$("#close-modal").click(() => {
   $("#modal").hide();
-})
+});
