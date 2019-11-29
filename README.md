@@ -121,7 +121,3 @@ All content was written by me. Audio for the piano sounds were generated in a li
 All images are from [Unsplash](http://unsplash.com), a royalty free, free to use image repository. Photographer credits for the image is below.
 
 * Photo by Geert Pieters on [Unsplash](https://unsplash.com/@shotsbywolf)
-
-
-### Acknowledgements
-
