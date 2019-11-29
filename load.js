@@ -1,3 +1,3 @@
 $(window).on('load', () => {
-		$(".se-pre-con").fadeOut("slow");;
+		$(".loading").fadeOut("slow");;
 	});
