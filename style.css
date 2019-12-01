@@ -58,9 +58,8 @@ a {
 }
 
 .orient-box {
-  padding: 25% 15%;
+  padding: 15%;
   margin-top: 20%;
-  margin-left: 5%;
 }
 
 /*Help modal styling*/
@@ -100,7 +99,7 @@ button:focus {
 }
 
 #piano {
-  height: 68vh;
+  height: 65vh;
   width: 85vw;
   max-height: 500px;
 }
