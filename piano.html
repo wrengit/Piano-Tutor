@@ -30,206 +30,230 @@
     <link rel="manifest" href="assets/images/site.webmanifest" />
   </head>
   <body>
-    <div class="loading text">Please wait...</div>
+    <section class="background-piano">
+      <div class="loading text">Please wait...</div>
 
-    <!--orientation warning-->
-    <section class="portrait text orient-box">
-      <h3>Please rotate your device</h3>
-      <h4>This site works best in landscape mode</h4>
-    </section>
+      <!--orientation warning-->
+      <section class="portrait text orient-box">
+        <h3>Please rotate your device</h3>
+        <h4>This site works best in landscape mode</h4>
+      </section>
 
-    <!--menu items-->
-    <section class="container-fluid menu landscape ">
-      <div class="row h-100 align-items-center mx-auto">
-        <div class="col-4 col-md-3">
-          <a class="col-5 btn btn-light btn-sm mb-1 mr-2" href="index.html"
-            >Menu</a
-          >
-          <button class="col-5 btn btn-success btn-sm mb-1" id="startTutor">
-            Go</button
-          ><button
-            class="col-8 btn btn-outline-secondary btn-sm mt-1"
-            aria-pressed="false"
-            data-toggle="button"
-            id="fullscreen-button"
-          >
-            Fullscreen
-          </button>
-          <button class="col-2 btn btn-light btn-sm mt-1 ml-2" id="help-button">
-            ?
-          </button>
+      <!--menu items-->
+      <section class="container-fluid menu landscape ">
+        <div class="row h-100 align-items-center mx-auto">
+          <div class="col-4 col-md-3">
+            <a class="col-5 btn btn-light btn-sm mb-1 mr-2" href="index.html"
+              >Menu</a
+            >
+            <button class="col-5 btn btn-success btn-sm mb-1" id="startTutor">
+              Go</button
+            ><button
+              class="col-8 btn btn-outline-secondary btn-sm mt-1"
+              aria-pressed="false"
+              data-toggle="button"
+              id="fullscreen-button"
+            >
+              Fullscreen
+            </button>
+            <button
+              class="col-2 btn btn-light btn-sm mt-1 ml-2"
+              id="help-button"
+            >
+              ?
+            </button>
+          </div>
+          <div class="col-5 col-md-7">
+            <div class="col-12 text" id="notebox"></div>
+          </div>
+
+          <div class="col-3 col-md-2 justify-content-center">
+            <select class="col btn btn-light btn-sm" id="speed-select">
+              <option value="800">Slow</option>
+              <option value="500" selected>Normal</option>
+              <option value="300">Fast</option>
+            </select>
+            <select class="col btn btn-light btn-sm mt-2" id="bar-select">
+              <option value="1">1 bar</option>
+              <option value="2">2 bars</option>
+              <option value="3">3 bars</option>
+              <option value="4">4 bars</option>
+              <option value="5">5 bars</option>
+              <option value="6">6 bars</option>
+              <option value="7">7 bars</option>
+              <option value="8" selected>8 bars</option>
+            </select>
+          </div>
         </div>
-        <div class="col-5 col-md-7">
-          <div class="col-12 text" id="notebox"></div>
+      </section>
+
+      <!--Help modal-->
+      <section id="modal">
+        <span class="text" id="close-modal">&times</span>
+        <div class="content text">
+          <p>
+            Change the speed of the song and the length with the dropdown menus
+            (top right)
+          </p>
+          <p>Press "Go" to have the Tutor play the song</p>
+          <p>To change song, return to menu</p>
+          <p>Press the "Fullscreen" button to toggle fullscreen view</p>
         </div>
+      </section>
 
-        <div class="col-3 col-md-2 justify-content-center">
-          <select class="col btn btn-light btn-sm" id="speed-select">
-            <option value="800">Slow</option>
-            <option value="500" selected>Normal</option>
-            <option value="300">Fast</option>
-          </select>
-          <select class="col btn btn-light btn-sm mt-2" id="bar-select">
-            <option value="1">1 bar</option>
-            <option value="2">2 bars</option>
-            <option value="3">3 bars</option>
-            <option value="4">4 bars</option>
-            <option value="5">5 bars</option>
-            <option value="6">6 bars</option>
-            <option value="7">7 bars</option>
-            <option value="8" selected>8 bars</option>
-          </select>
+      <!--Single octave piano keys-->
+      <section class="container-fluid landscape">
+        <div class="row mx-auto" id="piano">
+          <button
+            class="key rounded-bottom m-0 ml-3"
+            id="c-key"
+            data-note="C"
+            data-sound="middle-C-sound"
+          ></button>
+          <button
+            class="sharp rounded-bottom m-0"
+            id="csharp-key"
+            data-note="C#"
+            data-sound="Csharp-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="d-key"
+            data-note="D"
+            data-sound="D-sound"
+          ></button>
+          <button
+            class="sharp rounded-bottom m-0"
+            id="dsharp-key"
+            data-note="D#"
+            data-sound="Dsharp-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="e-key"
+            data-note="E"
+            data-sound="E-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="f-key"
+            data-note="F"
+            data-sound="F-sound"
+          ></button>
+          <button
+            class="sharp rounded-bottom m-0"
+            id="fsharp-key"
+            data-note="F#"
+            data-sound="Fsharp-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="g-key"
+            data-note="G"
+            data-sound="G-sound"
+          ></button>
+          <button
+            class="sharp rounded-bottom m-0"
+            id="gsharp-key"
+            data-note="G#"
+            data-sound="Gsharp-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="a-key"
+            data-note="A"
+            data-sound="A-sound"
+          ></button>
+          <button
+            class="sharp rounded-bottom m-0"
+            id="asharp-key"
+            data-note="A#"
+            data-sound="Asharp-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="b-key"
+            data-note="B"
+            data-sound="B-sound"
+          ></button>
+          <button
+            class="key rounded-bottom m-0"
+            id="chigh-key"
+            data-note="C (high)"
+            data-sound="highC-sound"
+          ></button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--Help modal-->
-    <section id="modal">
-      <span class="text" id="close-modal">&times</span>
-      <div class="content text">
-        <p>
-          Change the speed of the song and the length with the dropdown menus
-          (top right)
-        </p>
-        <p>Press "Go" to have the Tutor play the song</p>
-        <p>To change song, return to menu</p>
-        <p>Press the "Fullscreen" button to toggle fullscreen view</p>
-      </div>
+      <!--audio files play when triggered by keypress-->
+      <section>
+        <audio
+          src="assets/keywavs/middleCcomp.mp3"
+          preload="auto"
+          id="middle-C-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Csharpcomp.mp3"
+          preload="auto"
+          id="Csharp-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Dcomp.mp3"
+          preload="auto"
+          id="D-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Dsharpcomp.mp3"
+          preload="auto"
+          id="Dsharp-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Ecomp.mp3"
+          preload="auto"
+          id="E-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Fcomp.mp3"
+          preload="auto"
+          id="F-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Fsharpcomp.mp3"
+          preload="auto"
+          id="Fsharp-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Gcomp.mp3"
+          preload="auto"
+          id="G-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Gsharpcomp.mp3"
+          preload="auto"
+          id="Gsharp-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Acomp.mp3"
+          preload="auto"
+          id="A-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Asharpcomp.mp3"
+          preload="auto"
+          id="Asharp-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/Bsharpcomp.mp3"
+          preload="auto"
+          id="B-sound"
+        ></audio>
+        <audio
+          src="assets/keywavs/highCcomp.mp3"
+          preload="auto"
+          id="highC-sound"
+        ></audio>
+      </section>
     </section>
-
-    <!--Single octave piano keys-->
-    <section class="container-fluid landscape">
-      <div class="row mx-auto" id="piano">
-        <button
-          class="key rounded-bottom m-0 ml-3"
-          id="c-key"
-          data-note="C"
-          data-sound="middle-C-sound"
-        ></button>
-        <button
-          class="sharp rounded-bottom m-0"
-          id="csharp-key"
-          data-note="C#"
-          data-sound="Csharp-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="d-key"
-          data-note="D"
-          data-sound="D-sound"
-        ></button>
-        <button
-          class="sharp rounded-bottom m-0"
-          id="dsharp-key"
-          data-note="D#"
-          data-sound="Dsharp-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="e-key"
-          data-note="E"
-          data-sound="E-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="f-key"
-          data-note="F"
-          data-sound="F-sound"
-        ></button>
-        <button
-          class="sharp rounded-bottom m-0"
-          id="fsharp-key"
-          data-note="F#"
-          data-sound="Fsharp-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="g-key"
-          data-note="G"
-          data-sound="G-sound"
-        ></button>
-        <button
-          class="sharp rounded-bottom m-0"
-          id="gsharp-key"
-          data-note="G#"
-          data-sound="Gsharp-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="a-key"
-          data-note="A"
-          data-sound="A-sound"
-        ></button>
-        <button
-          class="sharp rounded-bottom m-0"
-          id="asharp-key"
-          data-note="A#"
-          data-sound="Asharp-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="b-key"
-          data-note="B"
-          data-sound="B-sound"
-        ></button>
-        <button
-          class="key rounded-bottom m-0"
-          id="chigh-key"
-          data-note="C (high)"
-          data-sound="highC-sound"
-        ></button>
-      </div>
-    </section>
-
-    <!--audio files play when triggered by keypress-->
-    <section>
-      <audio
-        src="assets/keywavs/middleCcomp.mp3"
-        preload="auto"
-        id="middle-C-sound"
-      ></audio>
-      <audio
-        src="assets/keywavs/Csharpcomp.mp3"
-        preload="auto"
-        id="Csharp-sound"
-      ></audio>
-      <audio src="assets/keywavs/Dcomp.mp3" preload="auto" id="D-sound"></audio>
-      <audio
-        src="assets/keywavs/Dsharpcomp.mp3"
-        preload="auto"
-        id="Dsharp-sound"
-      ></audio>
-      <audio src="assets/keywavs/Ecomp.mp3" preload="auto" id="E-sound"></audio>
-      <audio src="assets/keywavs/Fcomp.mp3" preload="auto" id="F-sound"></audio>
-      <audio
-        src="assets/keywavs/Fsharpcomp.mp3"
-        preload="auto"
-        id="Fsharp-sound"
-      ></audio>
-      <audio src="assets/keywavs/Gcomp.mp3" preload="auto" id="G-sound"></audio>
-      <audio
-        src="assets/keywavs/Gsharpcomp.mp3"
-        preload="auto"
-        id="Gsharp-sound"
-      ></audio>
-      <audio src="assets/keywavs/Acomp.mp3" preload="auto" id="A-sound"></audio>
-      <audio
-        src="assets/keywavs/Asharpcomp.mp3"
-        preload="auto"
-        id="Asharp-sound"
-      ></audio>
-      <audio
-        src="assets/keywavs/Bsharpcomp.mp3"
-        preload="auto"
-        id="B-sound"
-      ></audio>
-      <audio
-        src="assets/keywavs/highCcomp.mp3"
-        preload="auto"
-        id="highC-sound"
-      ></audio>
-    </section>
-
     <!--links to js files-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>

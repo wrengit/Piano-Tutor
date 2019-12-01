@@ -3,8 +3,7 @@
 body {
   height: 100%;
   width: 100%;
-  background-color: #222222;
-  touch-action: none;
+  background-color: #402e32;
 }
 
 .menu {
@@ -22,14 +21,35 @@ a {
 }
 
 .text {
-  color: #e9e3d3;
+  color: #fff8f0;
   font-family: "Comfortaa", cursive;
 }
 
-#landing-page {
+.background {
   background-image: url("assets/images/geert-pieters-8QrPJ3Kfie4-unsplash-min-comp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.background-piano {
+  background-image: linear-gradient(
+    to top,
+    #ab8b67,
+    #bb9f7f,
+    #cbb398,
+    #dac7b2,
+    #eadccc,
+    #e1d3c6,
+    #d7cac0,
+    #cdc1ba,
+    #a89994,
+    #847371,
+    #624f50,
+    #402e32
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 #landing-content {
@@ -85,7 +105,7 @@ button:focus {
   max-height: 500px;
 }
 .key {
-  background-color: #f8f2e0;
+  background-color: #fff8f0;
   height: 100%;
   width: 12%;
   margin: 0.1428%;
@@ -95,7 +115,7 @@ button:focus {
 }
 
 .sharp {
-  background-color: #313131;
+  background-color: #402e32;
   height: 40%;
   max-height: 300px;
   width: 7%;
