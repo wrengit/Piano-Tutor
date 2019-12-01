@@ -48,6 +48,7 @@ The process took far longer than expected, whilst learning JavaScript on the go.
 * Unsplash - image repository
 * favicon.io - favicon generator
 * Boot swatch - Bootstrap styles
+* mycolor - colour gradient picker
 
 ## Libraries / plug-ins used
 * jQuery full screen plug-in (https://github.com/kayahr/jquery-fullscreen-plugin/)
