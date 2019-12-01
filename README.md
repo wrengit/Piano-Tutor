@@ -17,6 +17,8 @@ Colours where chosen to keep attention focused on the keyboard, with a single pa
 ## Comments
 The process took far longer than expected, whilst learning JavaScript on the go. I do not consider the site/app finished, but time-restraints means that I cannot further develop the site for examination purposes. The site will continue to be developed until it is finished post grading, to be used as part of a personal portfolio.
 
+The songs are stored as object arrays in 'songs.js' This file is not referenced by the site, and is included for development purposes only. The object arrays were converted to a string using the console and this string was used in 'index.html'.
+
 ## Features
 ### Existing Features
 * Multi-touch input keyboard
@@ -57,6 +59,8 @@ The process took far longer than expected, whilst learning JavaScript on the go.
 The site was developed on a Dell XPS 13 13" 2-in-1 touch screen laptop. Initial testing was conducted with Brave Browser, Microsoft Edge, and Chrome. Mobile testing used a Huawei P20 pro, using Brave, Chrome, and Firefox. There was no availability of Apple devices, either mobile or desktop to conduct testing. 
 
 All testing was conducted manually.
+
+The site was tested with W3 html & css validators.
 
 ### Browser compatibility
 * On desktop/laptop, Brave Browser and Chrome showed full functionality. Audio played immediately after key press and fast repeated key presses stopped the audio cleanly before restarting. On mobile devices, Brave and Chrome showed full functionality, except for a short delay between registering keypress and playing a note. This was found to be a common issue on mobile browsers. Several attempts were made to remedy this situation including removing the user’s ability to zoom and using a JS plugin 'fast-click'. None of the changes removed the short ms delay in registering a click. 
