@@ -75,9 +75,42 @@ The site was tested with W3 html & css validators.
 ### Browser compatibility
 
 - On desktop/laptop, Brave Browser and Chrome showed full functionality. Audio played immediately after key press and fast repeated key presses stopped the audio cleanly before restarting. On mobile devices, Brave and Chrome showed full functionality, except for a short delay between registering keypress and playing a note. This was found to be a common issue on mobile browsers. Several attempts were made to remedy this situation including removing the user’s ability to zoom and using a JS plugin 'fast-click'. None of the changes removed the short ms delay in registering a click.
-- Firefox desktop browser has a slight delay in playing the audio track when a key is pressed. Fast repeated key clicks of the same key lead to no audio being played, as it stops and restart the audio track before audio is heard. Firefox mobile browser does not recognise user input to click keys at all. Removing all functionality from the site. This is a bug/issue that needs to be addressed.
+- Firefox desktop browser has a slight delay in playing the audio track when a key is pressed. Fast repeated key clicks of the same key lead to no audio being played, as it stops and restart the audio track before audio is heard. Firefox mobile browser does not support 'pointer' events by default. The user must manually turn these on in a config file.
 - Edge browser on desktop has a similar audio play lag, though not as severe as Firefox. Repeated quick key presses lead to some audio being heard.
 - Using a borrowed Apple iPhone early in development showed that the site does not register user touch input, like Firefox. Access to this device was very limited and testing at a later stage in development was not possible.
+
+A method was found for detecting if the user was on a mobile or desktop browser (http://detectmobilebrowsers.com/
+https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser). This was implemented in piano.js:
+
+````const keyPress = note => {
+  if (mobileAndTabletcheck == false) {
+    note.onpointerdown = () => {
+      keyDown(event);
+    };
+    note.onpointerup = () => {
+      keyUp(event);
+    };
+    note.onpointerleave = () => {
+      keyUp(event);
+    };
+  } else {
+    note.onmousedown = () => {
+      keyDown(event);
+    };
+    note.onmouseup = () => {
+      keyUp(event);
+    };
+    note.onmouseleave = () => {
+      keyUp(event);
+    };
+  }
+};```
+
+Using this method allowed FireFox to register the user touch input. This played the uadio note, but did not visually display the keypress. The reduced functionality also propagated to all mobile browser, giving significanlty reduced functionality on Chrome, Brave, Edge.
+
+The code has been left commented out in piano.js for future work.
+
+It was decided that for the current site version, full functionality with Chrome/Brave/Edge was more important to demonstrate how the finished site may look/feel.
 
 ### User stories
 
@@ -113,12 +146,14 @@ The site can be cloned to a local repository by the following steps (GitHub guid
 
 - Press Enter. Your local clone will be created.
 
-```
+````
+
 > Cloning into `Spoon-Knife`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
 > remove: Total 10 (delta 1), reused 10 (delta 1)
 > Unpacking objects: 100% (10/10), done.
+
 ```
 
 ### Deployment
@@ -142,3 +177,4 @@ All content was written by me. Audio for the piano sounds were generated in a li
 All images are from [Unsplash](http://unsplash.com), a royalty free, free to use image repository. Photographer credits for the image is below.
 
 - Photo by Geert Pieters on [Unsplash](https://unsplash.com/@shotsbywolf)
+```
