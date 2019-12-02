@@ -108,9 +108,9 @@ const keyPress = note => {
 };
 ```
 
-Using this method allowed FireFox to register the user touch input. This played the uadio note, but did not visually display the keypress. The reduced functionality also propagated to all mobile browser, giving significanlty reduced functionality on Chrome, Brave, Edge.
+Using this method allowed FireFox to register the user touch input. This played the audio note, but did not visually display the keypress. The reduced functionality also propagated to all mobile browsers, giving significanlty reduced functionality on Chrome, Brave, Edge.
 
-The code has been left commented out in piano.js for future work.
+The code has been left commented out in browsercheck.js for future work.
 
 It was decided that for the current site version, full functionality with Chrome/Brave/Edge was more important to demonstrate how the finished site may look/feel.
 
