@@ -82,7 +82,8 @@ The site was tested with W3 html & css validators.
 A method was found for detecting if the user was on a mobile or desktop browser (http://detectmobilebrowsers.com/
 https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser). This was implemented in piano.js:
 
-````const keyPress = note => {
+````
+const keyPress = note => {
   if (mobileAndTabletcheck == false) {
     note.onpointerdown = () => {
       keyDown(event);
@@ -104,7 +105,9 @@ https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser). This w
       keyUp(event);
     };
   }
-};```
+};
+
+```
 
 Using this method allowed FireFox to register the user touch input. This played the uadio note, but did not visually display the keypress. The reduced functionality also propagated to all mobile browser, giving significanlty reduced functionality on Chrome, Brave, Edge.
 
