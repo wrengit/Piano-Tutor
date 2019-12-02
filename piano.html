@@ -47,16 +47,24 @@
       <section class="container-fluid menu landscape ">
         <div class="row h-100 align-items-center mx-auto">
           <div class="col-4 col-md-3">
-            <a class="col-5 btn btn-light mb-1 mr-2" href="index.html"
+            <a
+              class="col-5 btn btn-light mb-1 mr-2"
+              href="index.html"
+              aria-label="Return to menu"
               >Menu</a
             >
-            <button class="col-5 btn btn-success mb-1" id="startTutor">
+            <button
+              class="col-5 btn btn-success mb-1"
+              id="startTutor"
+              aria-label="Start piano tutor"
+            >
               Go</button
             ><button
               class="col-8 btn btn-secondary mt-1"
               aria-pressed="false"
               data-toggle="button"
               id="fullscreen-button"
+              aria-label="Press to toggle fullscreen view"
             >
               Fullscreen
             </button>
@@ -64,7 +72,11 @@
               class="col-2 btn btn-info btn-sm mt-1 ml-2 p-2"
               id="help-button"
             >
-            <i class="fa fa-info" aria-hidden="true"></i>
+              <i
+                class="fa fa-info"
+                aria-hidden="true"
+                aria-label="Press for information"
+              ></i>
             </button>
           </div>
           <div class="col-5 col-md-7">
@@ -72,12 +84,20 @@
           </div>
 
           <div class="col-3 col-md-2 justify-content-center">
-            <select class="col btn btn-light btn-sm" id="speed-select">
+            <select
+              class="col btn btn-light btn-sm"
+              id="speed-select"
+              aria-label="Select speed"
+            >
               <option value="800">Slow</option>
               <option value="500" selected>Normal</option>
               <option value="300">Fast</option>
             </select>
-            <select class="col btn btn-light btn-sm mt-2" id="bar-select">
+            <select
+              class="col btn btn-light btn-sm mt-2"
+              id="bar-select"
+              aria-label="select song length"
+            >
               <option value="1">1 bar</option>
               <option value="2">2 bars</option>
               <option value="3">3 bars</option>
@@ -94,7 +114,9 @@
 
       <!--Help modal-->
       <section id="modal">
-        <span class="text" id="close-modal">&times;</span>
+        <span class="text" id="close-modal" aria-label="close help box"
+          >&times;</span
+        >
         <div class="content text">
           <p>
             Change the speed of the song and the length with the dropdown menus
@@ -114,78 +136,91 @@
             id="c-key"
             data-note="C"
             data-sound="middle-C-sound"
+            aria-label="C key"
           ></button>
           <button
             class="sharp rounded-bottom m-0"
             id="csharp-key"
             data-note="C#"
             data-sound="Csharp-sound"
+            aria-label="C sharp key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="d-key"
             data-note="D"
             data-sound="D-sound"
+            aria-label="D key"
           ></button>
           <button
             class="sharp rounded-bottom m-0"
             id="dsharp-key"
             data-note="D#"
             data-sound="Dsharp-sound"
+            aria-label="D sharp key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="e-key"
             data-note="E"
             data-sound="E-sound"
+            aria-label="E key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="f-key"
             data-note="F"
             data-sound="F-sound"
+            aria-label="F key"
           ></button>
           <button
             class="sharp rounded-bottom m-0"
             id="fsharp-key"
             data-note="F#"
             data-sound="Fsharp-sound"
+            aria-label="F sharp key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="g-key"
             data-note="G"
             data-sound="G-sound"
+            aria-label="G key"
           ></button>
           <button
             class="sharp rounded-bottom m-0"
             id="gsharp-key"
             data-note="G#"
             data-sound="Gsharp-sound"
+            aria-label="G sharp key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="a-key"
             data-note="A"
             data-sound="A-sound"
+            aria-label="A key"
           ></button>
           <button
             class="sharp rounded-bottom m-0"
             id="asharp-key"
             data-note="A#"
             data-sound="Asharp-sound"
+            aria-label="A sharp key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="b-key"
             data-note="B"
             data-sound="B-sound"
+            aria-label="B key"
           ></button>
           <button
             class="key rounded-bottom m-0"
             id="chigh-key"
             data-note="C (high)"
             data-sound="highC-sound"
+            aria-label="High C key"
           ></button>
         </div>
       </section>
@@ -202,46 +237,26 @@
           preload="auto"
           id="Csharp-sound"
         ></audio>
-        <audio
-          src="assets/audio/Dcomp.mp3"
-          preload="auto"
-          id="D-sound"
-        ></audio>
+        <audio src="assets/audio/Dcomp.mp3" preload="auto" id="D-sound"></audio>
         <audio
           src="assets/audio/Dsharpcomp.mp3"
           preload="auto"
           id="Dsharp-sound"
         ></audio>
-        <audio
-          src="assets/audio/Ecomp.mp3"
-          preload="auto"
-          id="E-sound"
-        ></audio>
-        <audio
-          src="assets/audio/Fcomp.mp3"
-          preload="auto"
-          id="F-sound"
-        ></audio>
+        <audio src="assets/audio/Ecomp.mp3" preload="auto" id="E-sound"></audio>
+        <audio src="assets/audio/Fcomp.mp3" preload="auto" id="F-sound"></audio>
         <audio
           src="assets/audio/Fsharpcomp.mp3"
           preload="auto"
           id="Fsharp-sound"
         ></audio>
-        <audio
-          src="assets/audio/Gcomp.mp3"
-          preload="auto"
-          id="G-sound"
-        ></audio>
+        <audio src="assets/audio/Gcomp.mp3" preload="auto" id="G-sound"></audio>
         <audio
           src="assets/audio/Gsharpcomp.mp3"
           preload="auto"
           id="Gsharp-sound"
         ></audio>
-        <audio
-          src="assets/audio/Acomp.mp3"
-          preload="auto"
-          id="A-sound"
-        ></audio>
+        <audio src="assets/audio/Acomp.mp3" preload="auto" id="A-sound"></audio>
         <audio
           src="assets/audio/Asharpcomp.mp3"
           preload="auto"
