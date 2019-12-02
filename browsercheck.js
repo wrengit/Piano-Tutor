@@ -3,6 +3,9 @@ http://detectmobilebrowsers.com/
 https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 */
 
+/*
+This code is not currently in use. Is used for detecting if a browser in mobile or desktop
+
 window.mobileAndTabletcheck = () => {
   let check = false;
   (a => {
@@ -18,3 +21,5 @@ window.mobileAndTabletcheck = () => {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+
+*/
