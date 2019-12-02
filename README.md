@@ -148,7 +148,7 @@ The site can be cloned to a local repository by the following steps (GitHub guid
 
 - Press Enter. Your local clone will be created.
 
-````
+```
 
 > Cloning into `Spoon-Knife`...
 > remote: Counting objects: 10, done.
@@ -179,4 +179,4 @@ All content was written by me. Audio for the piano sounds were generated in a li
 All images are from [Unsplash](http://unsplash.com), a royalty free, free to use image repository. Photographer credits for the image is below.
 
 - Photo by Geert Pieters on [Unsplash](https://unsplash.com/@shotsbywolf)
-```
+
