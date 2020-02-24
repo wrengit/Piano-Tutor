@@ -1,7 +1,5 @@
 # Piano Tutor
 
-Milestone 2 project: Interactive Frontend Development - Code Institute
-
 A simple single octave piano made with JavaScript. Has a selection of songs to demonstrate how to play. Multi-touch playable keys.
 
 ## Demo
