@@ -4,7 +4,7 @@ A simple single octave piano made with JavaScript. Has a selection of songs to d
 
 ## Demo
 
-A link to the project hosted on GitHub Pages can be found [here](https://wrengit.github.io/milestone2/)
+A link to the project hosted on GitHub Pages can be found [here](https://wrengit.github.io/Piano-Tutor/)
 
 ## UX
 
